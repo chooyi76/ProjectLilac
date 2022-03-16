@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/design/css/main.css" />
+    <script src="/js/home/will.js" defer></script>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.1.umd.min.js" type="text/javascript">
+    </script>
+    <style>
+      .blind{
+        position: absolute;
+        width: 1;height: 1;
+        clip: rect(0 0 0 0);
+        margin: -1;overflow: hidden;
+      }
+      html,body{
+        background: url("/design/images/willback4.jpg") no-repeat ;
+        background-size: 100%;
+      }
+      #announce{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <h1><a href="/">LILAC</a> by 4 TEAM</h1>
+        <nav id="nav">
+          <form action="willupdate" method="get">
+          <ul class="actions special">
+            <input type="text" style="visibility : hidden" id="ownermeta" value="" name="adr">
+              <li><input type='submit' id = "update" value='유언장 조회' /></li>
+          </ul>
+        </form>
+        </nav>
+      </header>
+    <form>
+      <section id="main" class="container medium">
+        
+          <h2 style="color: antiquewhite;">유언장 작성</h2>
+          <p></p>
+        
+        <div class="box">
+          <form method="post" action="#">
+            <div class="row gtr-50 gtr-uniform">
+            
+              <div class="col-12">
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="1000자 이내로 작성해주세요."
+                  rows="6"
+                ></textarea>
+              </div>
+              <div class="col-6 col-12-mobilep">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                
+                  placeholder="유언 작성자 이름"
+                />
+              </div>
+              <div class="col-6 col-12-mobilep">
+                <input
+                  type="text"
+                  name="name"
+                  id="vname"
+                
+                  placeholder="상속자 이름"
+                />
+              </div>
+              <div class="col-6 col-12-mobilep">
+                <input
+                  type="text"
+                  name="meta"
+                  id="meta"
+                  
+                  placeholder="상속자 메타마스크 주소"
+                />
+              </div>
+              <div class="col-6 col-12-mobilep">
+                <input
+                  type="text"
+                  name="meta"
+                  id="vmeta"
+                  
+                  placeholder="상속할 금액"
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="text"
+                  name="adr"
+                  id="adr"
+                
+                  placeholder="유언 작성자 거주지 주소"
+                />
+              </div>
+              <div class="col-12">
+
+              
+                <ul class="actions special">
+                  <li><input type="submit" id="button" value="저장하기" /></li>
+                  <li><input type="button" value="블록체인에 저장" id="sT" onclick=""/></li>
+                  <li><input type="button" value="블록체인 불러오기" id="rT" /></li>
+                </ul>
+              </div>
+            </div>
+          </form>
+  <p id=announce></p>
+          </div>
+          </section>
+    </form>
+  </body>
+</html>
